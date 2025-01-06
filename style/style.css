@@ -1,2 +1,84 @@
 /*Regras e fontes*/
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');/*"Passion One" "Sriracha"*/
+
+:root{
+    --fonteDestaque: "Passion One";
+    --fontePadrao: 'Sriracha';
+    --corDestaqueFontes: #ffffff;
+    --CorDestaqueParágrafos: #00000066;
+}
+/*estilização geral*/
+*{
+    margin: 0;
+}
+body{
+    background-color: var(--corDestaqueFontes);
+    margin: auto;
+}
+
+/*Cabeçalho*/
+header{
+    padding-top: 4vh;
+    background: black;
+    color: white;
+    text-align: center;
+}
+header h1{
+    font-family: var(--fonteDestaque);
+    font-variant: small-caps;
+}
+header p{
+    padding: 0.4em 0 5vh;
+}
+header a{
+    color: var(--corDestaqueFontes);
+    text-decoration: none;
+}
+
+/*Conteúdo Principal*/
+main{
+    margin: auto;
+}
+main p{
+    font-family: var(--fontePadrao);
+}
+main section{
+    height: 75vh;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    padding: 8vh 2em 8vh 1em;
+}
+main section.destaque{
+    background: darkgrey;
+}
+section#imagem01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: left center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+section#imagem02{
+    background-image: url('../imagens/background002.jpg');
+    background-position: left center;
+    background-attachment: fixed;
+    background-size: cover
+}
+section.destaque p{
+    color: var(--corDestaqueFontes);
+    background-color: var(--CorDestaqueParágrafos);
+    max-width: 14em;
+    padding: 0.4em;
+}
+
+/*Rodapé*/
+footer{
+    text-align: center;
+    padding: 4vh;
+    background: #000000;
+    color: #ffffff;
+}
+footer a{
+    color: var(--corDestaqueFontes);
+    text-decoration: none;
+}
