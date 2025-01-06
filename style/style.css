@@ -5,15 +5,17 @@
 :root{
     --fonteDestaque: "Passion One";
     --fontePadrao: 'Sriracha';
-    --corDestaqueFontes: #ffffff;
-    --CorDestaqueParágrafos: #00000066;
+    --cor01: #ffffff;
+    --cor02: #00000066;
+    --cor03: #ffeb85a9;
 }
 /*estilização geral*/
 *{
     margin: 0;
+    padding: 0;
 }
 body{
-    background-color: var(--corDestaqueFontes);
+    background-color: var(--cor01);
     margin: auto;
 }
 
@@ -32,26 +34,41 @@ header p{
     padding: 0.4em 0 5vh;
 }
 header a{
-    color: var(--corDestaqueFontes);
+    color: var(--cor01);
     text-decoration: none;
 }
 
 /*Conteúdo Principal*/
 main{
+    max-width: 75vw;
     margin: auto;
+    background-color: var(--cor03);
 }
 main p{
     font-family: var(--fontePadrao);
+    
 }
 main section{
-    height: 75vh;
-    padding-top: 8vh;
-    padding-bottom: 8vh;
-    padding: 8vh 2em 8vh 1em;
+    min-height: 50vh;
+    max-height: 100vh;
 }
-main section.destaque{
+main section/*.normal*/{
+    position: relative;
+    padding-top: 1em;
+    padding: 8vh 2vh 8vh 2vh;
+}
+main section div{
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+main section.imagem{    
     background: darkgrey;
 }
+
 section#imagem01{
     background-image: url('../imagens/background001.jpg');
     background-position: left center;
@@ -64,9 +81,9 @@ section#imagem02{
     background-attachment: fixed;
     background-size: cover
 }
-section.destaque p{
-    color: var(--corDestaqueFontes);
-    background-color: var(--CorDestaqueParágrafos);
+section.imagem p{
+    color: var(--cor01);
+    background-color: var(--cor02);
     max-width: 14em;
     padding: 0.4em;
 }
@@ -79,6 +96,6 @@ footer{
     color: #ffffff;
 }
 footer a{
-    color: var(--corDestaqueFontes);
+    color: var(--cor01);
     text-decoration: none;
 }
